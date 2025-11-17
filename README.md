@@ -13,6 +13,50 @@ Backend API pour l'application mobile Setraf Store - Téléchargement APK avec C
 - ✅ Health checks automatiques
 - ✅ Logs et monitoring
 
+## 🐳 Déploiement sur Render
+
+### Déploiement Automatique
+
+Ce projet est configuré pour un déploiement automatique sur [Render](https://render.com) :
+
+1. **Connecter le repository GitHub** à Render
+2. **Render détecte automatiquement** le `render.yaml` et le `Dockerfile`
+3. **Configuration automatique** des variables d'environnement
+4. **Déploiement en un clic**
+
+### Configuration Render
+
+Le fichier `render.yaml` configure automatiquement :
+- **Service Web** avec Docker
+- **Port 5000** exposé
+- **Health check** sur `/api/health`
+- **Variables d'environnement** (à configurer dans le dashboard Render)
+
+### Variables d'Environnement sur Render
+
+Dans le dashboard Render, ajouter ces variables :
+
+| Variable | Valeur | Description |
+|----------|--------|-------------|
+| `NODE_ENV` | `production` | Environment |
+| `PORT` | `5000` | Port d'écoute |
+| `MONGO_URI` | `votre_mongo_uri` | URI MongoDB Atlas |
+| `MONGO_DB_NAME` | `votre_db_name` | Nom de la base |
+| `JWT_SECRET` | `votre_secret_jwt` | Secret JWT |
+| `CLOUDINARY_*` | `vos_cles_cloudinary` | Clés Cloudinary |
+| `FRONTEND_URL` | `https://votre-domaine.com` | URL du frontend |
+
+### Avantages du Déploiement Render
+
+- ✅ **Détection automatique** de Docker
+- ✅ **SSL gratuit** et automatique
+- ✅ **Scaling automatique**
+- ✅ **Logs en temps réel**
+- ✅ **Health monitoring**
+- ✅ **Rollback facile**
+
+---
+
 ## 🛠️ Technologies
 
 - **Node.js** - Runtime JavaScript
