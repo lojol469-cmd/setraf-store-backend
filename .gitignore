@@ -52,7 +52,7 @@ Thumbs.db
 *~
 
 # Docker
-Dockerfile*
+# Dockerfile*
 docker-compose*
 
 # Uploads
